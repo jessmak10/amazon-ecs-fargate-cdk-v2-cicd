@@ -13,12 +13,12 @@ export class EcsCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const githubUserName = new cdk.CfnParameter(this, "githubUserName", {
+    const githubUserName = new cdk.CfnParameter(this, "jessmak10", {
         type: "String",
         description: "Github username for source code repository"
     })
 
-    const githubRepository = new cdk.CfnParameter(this, "githubRespository", {
+    const githubRepository = new cdk.CfnParameter(this, "amazon-ecs-fargate-cdk-v2-cicd", {
         type: "String",
         description: "Github source code repository",
         default: "amazon-ecs-fargate-cdk-v2-cicd" 
